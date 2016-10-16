@@ -1,0 +1,71 @@
+@mixin reset-ul-ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin title-section {
+  font-size: $font-size-sub-title;
+  border-left: 8px solid $ci-brand;
+  position: relative;
+  background-color: #fff;
+  line-height: 40px;
+  font-weight: 800;
+  margin-bottom: $gutter * 4;
+  > b {
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    padding: 0 $gutter;
+    z-index: 20;
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    background-color: $color-border;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+  @content;
+}
+
+@mixin full-cover {
+  background-color: $ci-black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+
+// Set Breakpoint Standard Devices
+// Note: Breakpoint = em * browsers font-size base(16px)
+// Example: 30em = 30*16 = 480px
+
+$mobile:      30em;
+$tablet:      48em;
+$laptop:      64em;
+// Laptop global screen 12″, 13.3″, 14″, 15″ or 1024px
+$desktop:     90em;
+$largescreen: 100em;
+
+@mixin media ($media) {
+  @if $media == mobile {
+    @media only screen and (min-width: $mobile) { @content; }
+  }
+  @if $media == tablet {
+    @media only screen and (min-width: $tablet) { @content; }
+  }
+  @else if $media == laptop {
+    @media only screen and (min-width: $laptop) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $desktop) { @content; }
+  }
+  @else if $media == largescreen {
+    @media only screen and (min-width: $largescreen) { @content; }
+  }
+}

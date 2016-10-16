@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="112px" height="112px" viewBox="0 0 112 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-clouds</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="112" height="112" rx="1"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="112" height="112" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-650.000000, -1617.000000)">
+            <g id="Service-Product" transform="translate(648.000000, 866.000000)">
+                <g id="3" transform="translate(2.000000, 744.000000)">
+                    <g id="icon-clouds" transform="translate(0.000000, 7.000000)">
+                        <path d="M80.437556,42.1722604 C79.5664088,34.7923601 73.2951648,29.0679114 65.6875341,29.0679114 C60.728167,29.0679114 56.3385055,31.5019501 53.6407736,35.2400665 C53.9558154,35.2279501 54.2719033,35.2210693 54.5896352,35.2210693 C65.7265407,35.2210693 75.2828571,42.732903 78.1261538,53.1957396 C81.3100484,53.899385 84.2336,55.4954515 86.5950681,57.8587368 C86.8047473,58.0686039 87.0081495,58.2829584 87.2055736,58.5015014 C88.9317275,56.7700609 90,54.381795 90,51.7428255 C90,46.457108 85.7185407,42.1722604 80.437556,42.1722604 L80.437556,42.1722604 Z" id="Shape" fill="#36404C"></path>
+                        <path d="M74.3613451,57.2744598 C73.1935385,47.3819889 64.787244,39.7086039 54.5896352,39.7086039 C44.3920264,39.7086039 35.9857319,47.3819889 34.8179253,57.2744598 C27.7392,57.2744598 22,63.0180554 22,70.1032742 C22,77.1884931 27.7384527,82.9320886 34.8173275,82.9320886 L74.3620923,82.9320886 C81.440967,82.9320886 87.1794198,77.1884931 87.1794198,70.1032742 C87.1794198,63.0180554 81.4402198,57.2744598 74.3613451,57.2744598 L74.3613451,57.2744598 Z" id="Shape" fill="#36404C"></path>
+                        <use id="box" stroke="#DDDDDD" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

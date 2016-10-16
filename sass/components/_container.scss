@@ -1,0 +1,120 @@
+// ==================================================================== Base CSS
+
+body {
+  font-family: $body-font;
+  font-size: $font-size-text-reader;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  color: $ci-text-reader;
+  @include media(tablet) {
+    font-weight: 300;
+  }
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  &:hover {
+    color: $ci-black;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $ci-black;
+  margin-top: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  border: 3px solid $ci-black;
+  color: $ci-black;
+  border-radius: 3px;
+  padding: 10px 0;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  &:hover {
+    border-color: $ci-brand;
+    color: $ci-brand;
+  }
+
+  .fa {
+    display: inline-block;
+    margin-right: $gutter;
+  }
+}
+
+// =================================================================== container
+.container {
+  max-width: $container-width;
+  margin: auto;
+  padding: 0 $gutter;
+}
+
+.section-main {
+  margin-top: 180px;
+}
+
+// =============================================================== Title Content
+.title {
+  margin: 0;
+  @include media(tablet) {
+    font-size: $font-size-title;
+  }
+}
+
+.title-section {
+  @include title-section;
+}
+
+.sub-title {
+  font-size: $font-size-title-section;
+  margin: $gutter 0;
+}
+
+
+
+// ================================================================== Responsive
+.grid {
+  &:before ,
+  &:after {
+    display: block;
+    content:'';
+    clear: both;
+  }
+
+  @include media(tablet) {
+    margin: 0 (-$gutter-grid);
+  }
+}
+
+.col-6 {
+  @include media(tablet) {
+    float: left;
+    padding: 0 $gutter-grid;
+    width: 50%;
+  }
+}

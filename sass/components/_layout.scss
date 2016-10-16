@@ -1,0 +1,359 @@
+/**
+  1. Header
+  2. Intro Company
+  3. Service and Product
+  4. About us
+  5. Event
+  6. Clients
+  7. Contact us
+  7. Footer
+**/
+
+* ,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+// ========================================================================= 1.0
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: $gutter*2 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+  z-index: 100;
+
+  nav {
+    overflow: hidden;
+  }
+
+  #logo {
+    float: left;
+
+    img {
+      display: block;
+      height: 60px;
+    }
+  }
+
+  ul {
+    @include reset-ul-ol;
+    float: right;
+    > li {
+      display: inline-block;
+      line-height: 4em;
+      margin: 0 $gutter;
+    }
+  }
+
+  a {
+    color: $ci-black;
+    font-weight: 400;
+  }
+}
+
+// ========================================================================= 2.0
+.company-intro {
+  min-height: 440px;
+  position: relative;
+  @include media(laptop) {
+    padding-bottom: $gutter-full-section;
+  }
+}
+
+.we-are-openstack {
+  @include media(tablet) {
+    padding-top: $gutter * 4.66666;
+  }
+}
+
+.intro-vision {
+  font-size: $font-size-text-reader + 4;
+  @include media(tablet) {
+    max-width: 540px;
+  }
+}
+
+.trusted-title {
+  font-size: $font-size-text-reader;
+  padding-top: $gutter * 2;
+}
+
+.trusted-by-our-costermers {
+  img {
+    margin-right: $gutter;
+  }
+}
+
+.we-build-scale {
+  margin: 0 -$gutter;
+  @include media(laptop) {
+    margin: 0;
+    max-width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+// ========================================================================= 3.0
+.service-section {
+  padding-bottom: $gutter-section;
+}
+
+.service-lists {
+  padding-top: $gutter * 3;
+
+  .list-item {
+    margin-bottom: $gutter * 2;
+  }
+}
+
+.title-service {
+  font-size: $font-size-text-reader + 10;
+  margin: 0 0 ($gutter - 10);
+}
+
+.icon-service {
+  float: left;
+  overflow: hidden;
+  margin-right: $gutter * 2;
+  height: 48px;
+
+  @include media(tablet) {
+    height: auto;
+  }
+}
+
+.detail {
+  clear: left;
+  margin-top: $gutter;
+  @include media(tablet) {
+    clear: none;
+    margin-top: 0;
+  }
+}
+
+.photo-event {
+  border-bottom: 8px solid $ci-brand;
+}
+
+// ========================================================================= 4.0
+.founder-opsta {
+  overflow: hidden;
+  padding-bottom: $gutter-section;
+}
+
+.founder {
+  float: left;
+  margin-right: $gutter * 2.6666;
+  position: relative;
+
+  > img {
+    position: relative;
+    z-index: 10;
+  }
+
+  &:after {
+    background-color: $ci-brand;
+    width: 195px;
+    height: 195px;
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    right: -10px;
+  }
+}
+
+.bio-founder {
+}
+
+#name {
+  font-family: $body-font;
+  font-size: $font-size-title-section;
+  font-weight: 300;
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
+.expert {
+  font-size: $font-size-sub-title;
+  margin-bottom: $gutter * 2;
+}
+
+// ========================================================================= 5.0
+.global-event {
+  background-image: url(../img/full-bg-event.jpg);
+  @include full-cover;
+  padding-top: 615px;
+  padding-bottom: 75px;
+  color: #fff;
+}
+
+.openstack-submit {
+  border-left: 42px solid $ci-brand;
+  padding-left: $gutter * 2;
+}
+
+.title-event {
+  color: #fff;
+  font-size: $font-size-sub-title;
+  line-height: 42px;
+}
+
+.event-date-time {
+  font-size: $font-size-text-reader + 4;
+}
+
+.description-event {
+  font-size: $font-size-text-reader + 10;
+}
+
+.more-photo-event {
+  font-size: $font-size-text-reader + 4;
+  a  {
+    text-decoration: underline;
+    color: #fff;
+    display: inline-block;
+    margin-left: $gutter;
+    &:hover {
+      color: $ci-brand;
+    }
+  }
+
+  .icon-photo {
+    margin-right: $gutter;
+  }
+}
+
+
+// ========================================================================= 6.0
+.our-clients-and-partner {
+  padding: $gutter-section 0;
+
+  .title-section:after {
+    display: none;
+  }
+}
+
+.our-partner {
+  .first-partner {
+    margin-right: $gutter * 4;
+  }
+}
+
+// ========================================================================= 7.0
+.contact-us {
+  border-top: 1px solid $color-border;
+  padding-top: $gutter * 2;
+  padding: $gutter-full-section 0;
+  color: $ci-black;
+
+  .title {
+    margin-bottom: $gutter;
+  }
+
+  p {
+    font-size: $font-size-text-reader + 4;
+    max-width: 540px;
+  }
+}
+
+.list-contact {
+  padding-top: $gutter * 2;
+  font-size: $font-size-text-reader + 10;
+  color: $ci-black;
+
+  span {
+    display: inline-block;
+    margin: 0 $gutter 0 0;
+  }
+}
+
+.box-other-site {
+  background-color: $color-box;
+  padding: $gutter;
+  min-height: 400px;
+  border-bottom: 8px solid $ci-brand;
+
+  @include media(tablet) {
+    padding: $gutter * 3;
+    margin-left: 100px;
+  }
+
+  .title-box {
+    letter-spacing: 2px;
+  }
+
+  p {
+    color: $ci-black;
+    font-size: $font-size-text-reader;
+  }
+
+  .icon-social {
+    background-color: #fff;
+    display: inline-block;
+    font-weight: 400;
+    color: $ci-black;
+    border-radius: 3px;
+    padding: 6px 16px;
+    border: 1px solid $color-border;
+    &:hover {
+      color: $ci-brand;
+    }
+  }
+}
+
+.link-blog {
+  font-size: $font-size-text-reader + 4;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: $gutter;
+}
+
+.thanks {
+  padding-top: $gutter * 2;
+  font-weight: 400;
+}
+
+.ceo-contact {
+  display: block;
+  border-radius: 100%;
+  float: left;
+  overflow: hidden;
+  margin-right: $gutter;
+  height: 64px;
+}
+
+// ========================================================================= 8.0
+.footer-content {
+  background-color: #262c30;
+  padding: $gutter * 3 0;
+  color: $color-border;
+  overflow: auto;
+  font-size: $font-size-text-reader - 4;
+
+  .copyright {
+    opacity: .7;
+    margin: 0;
+    @include media(laptop) {
+      float: left;
+    }
+  }
+
+  .privacy {
+    margin: 0;
+    @include media(laptop) {
+      float: right;
+    }
+
+    a {
+      color: $color-border;
+      letter-spacing: 2px;
+      opacity: .7;
+    }
+  }
+}
